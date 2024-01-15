@@ -17,9 +17,9 @@ export default function Home() {
 
   const submitForm = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    toast.success("Request sent!");
+    toast.success("Request sent");
     console.log("data", data);
-    // router.push("/report/success");
+    router.push("/report/success");
   };
 
   const handleInputChange = (
