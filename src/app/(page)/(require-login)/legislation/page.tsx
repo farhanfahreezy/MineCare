@@ -60,9 +60,9 @@ export default function Home() {
             handleInput={handleInputChange}
           />
         ))}
-        <div className="w-full">
+        <div className="w-full pt-4">
           <label
-            className="block text-sm font-medium text-gray-900"
+            className="block font-medium text-gray-900"
             htmlFor="user_avatar"
           >
             Nama Lengkap
@@ -71,7 +71,7 @@ export default function Home() {
             type="text"
             name="nama_pemohon"
             onChange={handleInputChange}
-            className="w-full bg-[#D3B28D] border-gray-300 text-gray-900 placeholder:text-[14px] placeholder:text-gray-700 py-1 px-3"
+            className="w-full bg-[#D3B28D] border-gray-300 text-gray-900 placeholder:text-gray-800 placeholder:opacity-50 py-2 px-3"
             placeholder="Tulis disini"
             required
           />
@@ -79,7 +79,7 @@ export default function Home() {
 
         <div className="w-full">
           <label
-            className="block text-sm font-medium text-gray-900"
+            className="block font-medium text-gray-900"
             htmlFor="user_avatar"
           >
             NPWP
@@ -88,7 +88,7 @@ export default function Home() {
             type="text"
             name="npwp_pemohon"
             onChange={handleInputChange}
-            className="w-full bg-[#D3B28D] border-gray-300 text-gray-900 placeholder:text-[14px] placeholder:text-gray-700 py-1 px-3"
+            className="w-full bg-[#D3B28D] border-gray-300 text-gray-900 placeholder:text-gray-800 placeholder:opacity-50 py-2 px-3"
             placeholder="Tulis disini"
             required
           />
@@ -96,13 +96,13 @@ export default function Home() {
 
         <div className="w-full">
           <label
-            className="block text-sm font-medium text-gray-900"
+            className="block font-medium text-gray-900"
             htmlFor="user_avatar"
           >
             Scan KTP
           </label>
           <input
-            className="block w-full text-sm text-gray-900 border-0 cursor-pointer bg-[#D3B28D] "
+            className="block w-full text-gray-900 border-0 cursor-pointer bg-[#D3B28D] py-2 px-3"
             id="user_avatar"
             type="file"
             required
@@ -111,13 +111,13 @@ export default function Home() {
 
         <div className="w-full">
           <label
-            className="block text-sm font-medium text-gray-900"
+            className="block font-medium text-gray-900"
             htmlFor="user_avatar"
           >
             Surat Permohonan Bermaterai 6000
           </label>
           <input
-            className="block w-full text-sm text-gray-900 border-0 cursor-pointer bg-[#D3B28D] "
+            className="block w-full text-gray-900 border-0 cursor-pointer bg-[#D3B28D] py-2 px-3"
             id="user_avatar"
             type="file"
             required
@@ -126,13 +126,13 @@ export default function Home() {
 
         <div className="w-full">
           <label
-            className="block text-sm font-medium text-gray-900"
+            className="block font-medium text-gray-900"
             htmlFor="user_avatar"
           >
             Scan Surat Rekomendasi dari Kepada Desa/Lurah
           </label>
           <input
-            className="block w-full text-sm text-gray-900 border-0 cursor-pointer bg-[#D3B28D] "
+            className="block w-full text-gray-900 border-0 cursor-pointer bg-[#D3B28D] py-2 px-3"
             id="user_avatar"
             type="file"
             required
@@ -141,13 +141,13 @@ export default function Home() {
 
         <div className="w-full">
           <label
-            className="block text-sm font-medium text-gray-900"
+            className="block font-medium text-gray-900"
             htmlFor="user_avatar"
           >
             Dokumen SPPL
           </label>
           <input
-            className="block w-full text-sm text-gray-900 border-0 cursor-pointer bg-[#D3B28D] "
+            className="block w-full text-gray-900 border-0 cursor-pointer bg-[#D3B28D] py-2 px-3"
             id="user_avatar"
             type="file"
             required
@@ -182,7 +182,7 @@ const RadioOption = ({
 }: RadioOptionProps) => {
   return (
     <>
-      <div className="w-full bg-[#F7E4CF] bg-opacity-45">
+      <div className="w-full bg-[#F7E4CF] bg-opacity-45 shadow-md">
         <div className="bg-[#8F5718] w-full py-2 px-6">
           <label>
             {nomor + 1}
@@ -201,7 +201,7 @@ const RadioOption = ({
             </div>
           )}
         </div>
-        <div className="flex flex-row justify-between py-2 px-4">
+        <div className="flex flex-row justify-around py-2 px-4">
           {opsi.map((opt, index) => (
             <div className="flex items-center me-4" key={name + opt + index}>
               <input
@@ -215,7 +215,7 @@ const RadioOption = ({
               />
               <label
                 htmlFor={name + "-" + index}
-                className="ms-2 text-sm font-medium text-gray-900"
+                className="ms-2 font-medium text-gray-900"
               >
                 {opt}
               </label>
