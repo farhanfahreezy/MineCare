@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-1/2 -translate-x-1/2 bg-[#8F6D31] bg-opacity-[0.36] flex flex-row gap-2 px-4 justify-center items-start w-[80%]">
+      <nav className="z-[100] fixed top-0 left-1/2 -translate-x-1/2 bg-[#8F6D31] bg-opacity-[0.36] backdrop-blur-sm flex flex-row gap-2 px-4 justify-center items-start w-[80%]">
         {navbarOption.map((opt) => (
           <NavbarButton
             {...opt}
@@ -49,7 +49,7 @@ const Navbar = () => {
           </button>
         </div>
       </nav>
-      <Link href={"/"} className="fixed top-[20px] left-[20px]">
+      <Link href={"/"} className="z-[99] fixed top-[20px] left-[20px]">
         <Image
           src={"/MineCare-Container.svg"}
           width={0}

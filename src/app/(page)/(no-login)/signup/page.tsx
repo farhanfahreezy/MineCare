@@ -2,10 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { ChangeEvent, FormEvent, useState } from "react";
 import toast from "react-hot-toast";
 
 export default function Home() {
+  const router = useRouter();
   const [data, setdata] = useState({
     name: "",
     username: "",
@@ -26,6 +28,7 @@ export default function Home() {
     event.preventDefault();
     toast.success("Sign up success");
     console.log("data", data);
+    router.push("/login");
   };
 
   const unimplementedAlert = () => {
