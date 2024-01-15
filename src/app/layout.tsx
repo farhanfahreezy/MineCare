@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ToasterContext />
-        {children}
+        <div className="text-white">{children}</div>
       </body>
     </html>
   );
