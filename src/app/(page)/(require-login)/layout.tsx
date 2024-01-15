@@ -10,9 +10,9 @@ export default async function LoginLayout({
   //   redirect("/");
   // }
   return (
-    <div className="w-full h-screen relative bg-[url('/images/main-bg.png')] bg-cover bg-center bg-no-repeat">
+    <div className="w-full h-screen relative bg-[url('/images/main-bg.png')] bg-cover bg-center bg-no-repeat flex justify-center">
       <Navbar />
-      {children}
+      <div className="w-[80%] h-full pt-[150px]">{children}</div>
     </div>
   );
 }

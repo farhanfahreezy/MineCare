@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { ChangeEvent, FormEvent, useState } from "react";
 import toast from "react-hot-toast";
 
@@ -10,6 +11,8 @@ export default function Home() {
     email: "",
     password: "",
   });
+
+  const router = useRouter();
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { id, value } = event.target;
@@ -23,6 +26,7 @@ export default function Home() {
     event.preventDefault();
     toast.success("Logged in");
     console.log("data", data);
+    router.push("/home");
   };
 
   const unimplementedAlert = () => {
